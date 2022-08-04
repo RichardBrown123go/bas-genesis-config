@@ -32,7 +32,7 @@ contract DeployerProxy is IDeployerProxy, InjectorContextHolder {
         address deployer;
     }
 
-    mapping(address => Deployer) private _contractDeployers;
+    mapping(address => Deployer) _contractDeployers;
     mapping(address => SmartContract) private _smartContracts;
 
     constructor(bytes memory constructorParams) InjectorContextHolder(constructorParams) {
